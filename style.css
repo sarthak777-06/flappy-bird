@@ -1,0 +1,263 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('images/background-img.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bird {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+.best-score {
+    position: fixed;
+    z-index: 10;
+    top: 10px;  
+    right: 10px; 
+    font-size: 5vh;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.best-score:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.best_score_val {
+    color: gold;
+}
+
+.heading {
+    position: absolute;
+    top: 15%; /* Adjusted from 10% to 8% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7em; /* Increased from 6em to 8em */
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+}
+
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background:radial-gradient(lightgreen 50%, green);
+	border: 5px solid black;
+}
+.message {
+	position: absolute;
+	z-index: 10;
+	color: black;
+	top: 50%;
+	left: 50%;
+	font-size: 4em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+    display: flex;
+    gap: 20px;
+}
+
+.message button {
+    background: white;
+    padding: 25px; /* Reduced from 30px to 10px */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+    font-size: 0.8em; /* Reduced text size */
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.message button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* .messageStyle{
+	background: white;
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5%;
+} */
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.score_val {
+	color: gold;
+	font-weight: bold;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 28px; /* Reduced from 15px 32px to 12px 28px */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Reduced from 16px to 14px */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #3e8e41;
+    transform: scale(1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #ff4c4c;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.replay-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.replay-btn:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 1080px) {
+    .message {
+        font-size: 4vh;
+        top: 50%;
+        white-space: nowrap;
+    }
+    .score {
+        font-size: 8vh;
+    }
+    .bird {
+        width: 12vw;
+        height: auto;
+    }
+    .pipe_sprite {
+        width: 14vw;
+    }
+    .button {
+        padding: 1.2vh 2.4vh;
+        font-size: 1.4vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .message {
+        font-size: 3.5vh;
+    }
+    .score {
+        font-size: 7vh;
+    }
+    .bird {
+        width: 13vw;
+        height: auto;
+    }
+    .pipe_sprite {
+        width: 16vw;
+    }
+    .button {
+        padding: 1vh 2vh;
+        font-size: 1.2vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .message {
+        font-size: 3vh;
+    }
+    .score {
+        font-size: 6vh;
+    }
+    .bird {
+        width: 15vw;
+        height: auto;
+    }
+    .pipe_sprite {
+        width: 18vw;
+    }
+    .button {
+        padding: 0.8vh 1.6vh;
+        font-size: 1vh;
+    }
+}
