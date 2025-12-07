@@ -22,17 +22,6 @@ A fun and addictive browser-based Flappy Bird game built using **HTML**, **CSS**
 
 ---
 
-## 🛠️ Setup Instructions
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/Skythrill256/flappy-bird.git
-   cd flappy-bird
-   ```
-
-2. **Run the Game**:
-   - Open the `index.html` file in your browser.
-
 ---
 
 ## 🎮 How to Play
@@ -64,5 +53,6 @@ This project is licensed under the **MIT License**. Feel free to use, modify, an
 - Background image and sound effects sourced from free online resources.
 
 ---
+
 
 Made by: Sarthak
